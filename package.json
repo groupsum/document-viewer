@@ -1,7 +1,7 @@
 {
-  "name": "groupsum-pdf-viewer-workspace",
+  "name": "document-viewer-workspace",
   "version": "0.1.0",
-  "description": "SSOT-governed Groupsum PDF viewer component workspace.",
+  "description": "SSOT-governed Groupsum document viewer workspace.",
   "private": true,
   "type": "module",
   "packageManager": "pnpm@9.15.4",

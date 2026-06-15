@@ -1,6 +1,6 @@
 import { useState, useEffect, useCallback } from 'react';
 
-export function usePDFViewer(file: File | string | null) {
+export function useDocumentViewer(file: File | string | null) {
   const [numPages, setNumPages] = useState<number | null>(null);
   const [pageNumber, setPageNumber] = useState(1);
   const [scale, setScale] = useState(1.0);

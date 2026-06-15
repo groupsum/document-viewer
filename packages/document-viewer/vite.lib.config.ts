@@ -9,7 +9,7 @@ export default defineConfig({
     // Defines the build configuration for external library consumption
     lib: {
       entry: path.resolve(__dirname, 'src/index.ts'),
-      name: 'ReactTailwindPDFViewer',
+      name: 'DocumentViewer',
       fileName: (format) => `index.${format}.js`
     },
     rollupOptions: {

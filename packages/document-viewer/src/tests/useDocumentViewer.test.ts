@@ -1,10 +1,10 @@
 import { renderHook, act } from '@testing-library/react';
 import { describe, it, expect } from 'vitest';
-import { usePDFViewer } from '../hooks/usePDFViewer';
+import { useDocumentViewer } from '../hooks/useDocumentViewer';
 
-describe('usePDFViewer hook', () => {
+describe('useDocumentViewer hook', () => {
   it('should initialize with default states securely', () => {
-    const { result } = renderHook(() => usePDFViewer(null));
+    const { result } = renderHook(() => useDocumentViewer(null));
     expect(result.current.pageNumber).toBe(1);
     expect(result.current.scale).toBe(1.0);
     expect(result.current.rotation).toBe(0);
@@ -13,7 +13,7 @@ describe('usePDFViewer hook', () => {
   });
 
   it('should update numPages and unlock loading strictly on success event', () => {
-    const { result } = renderHook(() => usePDFViewer('mock.pdf'));
+    const { result } = renderHook(() => useDocumentViewer('mock.pdf'));
 
     act(() => {
       result.current.onDocumentLoadSuccess({ numPages: 12 });
@@ -24,7 +24,7 @@ describe('usePDFViewer hook', () => {
   });
 
   it('should respect hard bounds when zooming (min 0.5 to max 3.0)', () => {
-    const { result } = renderHook(() => usePDFViewer('mock.pdf'));
+    const { result } = renderHook(() => useDocumentViewer('mock.pdf'));
 
     act(() => {
       result.current.handleZoomIn();
@@ -49,7 +49,7 @@ describe('usePDFViewer hook', () => {
   });
 
   it('should ensure page transitions never break beyond total PDF length bounds', () => {
-    const { result } = renderHook(() => usePDFViewer('mock.pdf'));
+    const { result } = renderHook(() => useDocumentViewer('mock.pdf'));
     act(() => {
       result.current.onDocumentLoadSuccess({ numPages: 2 });
     });

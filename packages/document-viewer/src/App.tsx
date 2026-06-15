@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect, type ChangeEvent } from 'react';
 import { Upload, Hexagon, Book, Box, Code2, Play, Activity } from 'lucide-react';
-import { usePDFViewer, PDFToolbar, PDFDocumentView } from './index';
+import { useDocumentViewer, PDFToolbar, PDFDocumentView } from './index';
 import './App.css';
 
 type LogEntry = {
@@ -25,7 +25,7 @@ export default function App() {
     }, ...prev].slice(0, 40));
   };
 
-  const pdfState = usePDFViewer(file);
+  const pdfState = useDocumentViewer(file);
   const prevStateRef = useRef(pdfState);
 
   // Initial mount log
@@ -132,12 +132,12 @@ export default function App() {
                     <Code2 className="w-3.5 h-3.5" /> Drop-in Example
                   </div>
                   <pre className="p-4 text-[13px] font-mono leading-relaxed overflow-x-auto text-slate-300">
-                    <span className="text-pink-500">import</span> {'{'} PDFViewer {'}'} <span className="text-pink-500">from</span> <span className="text-amber-300">'react-pdf-suite'</span>;
+                    <span className="text-pink-500">import</span> {'{'} DocumentViewer {'}'} <span className="text-pink-500">from</span> <span className="text-amber-300">'@groupsum/document-viewer'</span>;
                     {'\n\n'}
                     <span className="text-slate-500">{'// Handles internal layout & states'}</span>
                     {'\n'}
                     {'<'}
-                    <span className="text-indigo-400">PDFViewer</span> {'\n  '}
+                    <span className="text-indigo-400">DocumentViewer</span> {'\n  '}
                     <span className="text-sky-300">file</span>
                     <span className="text-pink-500">=</span>
                     {'{'}bufferOrUrl{'}'}{'\n  '}
@@ -157,7 +157,7 @@ export default function App() {
               <div className="bg-[#1A1D24] border border-white/5 rounded-lg p-4">
                 <div className="flex items-center gap-2 mb-2">
                   <span className="px-1.5 py-0.5 rounded bg-sky-500/10 text-sky-400 text-xs font-mono">interface</span>
-                  <span className="font-mono text-sm text-slate-200">PDFViewerProps</span>
+                  <span className="font-mono text-sm text-slate-200">DocumentViewerProps</span>
                 </div>
                 <ul className="text-xs space-y-2 text-slate-400 font-mono">
                   <li><span className="text-sky-300">file</span>?: File | string | null</li>
@@ -169,7 +169,7 @@ export default function App() {
               <div className="bg-[#1A1D24] border border-white/5 rounded-lg p-4">
                 <div className="flex items-center gap-2 mb-2">
                   <span className="px-1.5 py-0.5 rounded bg-emerald-500/10 text-emerald-400 text-xs font-mono">hook</span>
-                  <span className="font-mono text-sm text-slate-200">usePDFViewer(file)</span>
+                  <span className="font-mono text-sm text-slate-200">useDocumentViewer(file)</span>
                 </div>
                 <div className="text-xs text-slate-400 mb-2">Returns structural state & dispatches:</div>
                 <div className="grid grid-cols-2 gap-x-2 gap-y-1 text-[11px] font-mono text-slate-500 bg-[#0E1116] p-2 rounded">

@@ -1,7 +1,7 @@
-export { PDFViewer } from './components/PDFViewer';
-export type { PDFViewerProps } from './components/PDFViewer';
+export { DocumentViewer } from './components/DocumentViewer';
+export type { DocumentViewerProps } from './components/DocumentViewer';
 
-export { usePDFViewer } from './hooks/usePDFViewer';
+export { useDocumentViewer } from './hooks/useDocumentViewer';
 
 export { PDFToolbar } from './components/subcomponents/PDFToolbar';
 export type { PDFToolbarProps } from './components/subcomponents/PDFToolbar';

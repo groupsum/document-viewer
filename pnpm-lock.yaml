@@ -8,7 +8,7 @@ importers:
 
   .: {}
 
-  packages/pdf-viewer:
+  packages/document-viewer:
     dependencies:
       '@radix-ui/react-slider':
         specifier: ^1.3.6

@@ -1,7 +1,7 @@
 {
-  "name": "@groupsum/pdf-viewer",
+  "name": "@groupsum/document-viewer",
   "version": "0.1.0",
-  "description": "Groupsum React PDF viewer component.",
+  "description": "Groupsum document viewer React component.",
   "type": "module",
   "license": "UNLICENSED",
   "sideEffects": [
@@ -14,7 +14,7 @@
   ],
   "main": "./dist/index.umd.js",
   "module": "./dist/index.es.js",
-  "style": "./dist/pdf-viewer.css",
+  "style": "./dist/document-viewer.css",
   "types": "./dist/types/index.d.ts",
   "exports": {
     ".": {
@@ -23,7 +23,7 @@
       "require": "./dist/index.umd.js"
     },
     "./style.css": {
-      "default": "./dist/pdf-viewer.css"
+      "default": "./dist/document-viewer.css"
     }
   },
   "scripts": {

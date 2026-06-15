@@ -1,16 +1,16 @@
 import React from 'react';
 import { cn } from '../lib/utils';
-import { usePDFViewer } from '../hooks/usePDFViewer';
+import { useDocumentViewer } from '../hooks/useDocumentViewer';
 import { PDFToolbar } from './subcomponents/PDFToolbar';
 import { PDFDocumentView } from './subcomponents/PDFDocumentView';
-import './PDFViewer.css';
+import './DocumentViewer.css';
 
-export interface PDFViewerProps {
+export interface DocumentViewerProps {
   file: File | string | null;
   className?: string;
 }
 
-export function PDFViewer({ file, className }: PDFViewerProps) {
+export function DocumentViewer({ file, className }: DocumentViewerProps) {
   const {
     numPages,
     pageNumber,
@@ -23,7 +23,7 @@ export function PDFViewer({ file, className }: PDFViewerProps) {
     handleRotate,
     handlePrevPage,
     handleNextPage,
-  } = usePDFViewer(file);
+  } = useDocumentViewer(file);
 
   if (!file) {
     return (
@@ -63,4 +63,4 @@ export function PDFViewer({ file, className }: PDFViewerProps) {
 // Export the subcomponents and hooks as first-class APIs
 export * from './subcomponents/PDFToolbar';
 export * from './subcomponents/PDFDocumentView';
-export * from '../hooks/usePDFViewer';
+export * from '../hooks/useDocumentViewer';
