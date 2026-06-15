@@ -1,4 +1,4 @@
-# PDF Viewer
+# Groupsum PDF Viewer
 
 SSOT-governed Groupsum workspace for the `@groupsum/pdf-viewer` React package.
 

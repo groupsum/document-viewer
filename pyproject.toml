@@ -1,5 +1,5 @@
 [project]
-name = "pdf-viewer-workspace"
+name = "groupsum-pdf-viewer-workspace"
 version = "0.1.0"
 description = "SSOT-governed Groupsum PDF viewer component workspace."
 requires-python = ">=3.10"

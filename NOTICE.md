@@ -1,1 +1,1 @@
-PDF Viewer is a Groupsum component package.
+Groupsum PDF Viewer is a Groupsum component package.
