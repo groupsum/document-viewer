@@ -4,6 +4,10 @@
   "description": "Groupsum document viewer React component.",
   "type": "module",
   "license": "UNLICENSED",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/groupsum/document-viewer"
+  },
   "sideEffects": [
     "**/*.css"
   ],
